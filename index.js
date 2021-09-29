@@ -16,6 +16,7 @@ close.addEventListener("click",()=>{
 
 /*toggle end*/
 /*about section tabs*/
+
 const aboutsection = document.querySelector(".about-section");
 const tabcontainer = document.querySelector(".about-tabs");
 tabcontainer.addEventListener("click",(e)=>{
@@ -25,7 +26,6 @@ tabcontainer.addEventListener("click",(e)=>{
     event.target.classList.add("active","outer-shadow");
     aboutsection.querySelector(".tab-content.active").classList.remove("active");
     aboutsection.querySelector(target).classList.add("active");
-    
   }
 })
 
