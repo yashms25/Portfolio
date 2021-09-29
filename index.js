@@ -21,9 +21,9 @@ const aboutsection = document.querySelector(".about-section");
 const tabcontainer = document.querySelector(".about-tabs");
 tabcontainer.addEventListener("click",(e)=>{
   if(e.target.classList.contains("tab-item") && !e.target.classList.contains("active")){
-    const target = event.target.getAttribute("data-target");
+    const target = e.target.getAttribute("data-target");
     tabcontainer.querySelector(".active").classList.remove("outer-shadow","active");
-    event.target.classList.add("active","outer-shadow");
+    e.target.classList.add("active","outer-shadow");
     aboutsection.querySelector(".tab-content.active").classList.remove("active");
     aboutsection.querySelector(target).classList.add("active");
   }
