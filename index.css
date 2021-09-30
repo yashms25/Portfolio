@@ -12,6 +12,7 @@
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
   --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
   --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --inner-shadoe-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
 
 /* Global style */
@@ -729,8 +730,123 @@ img{
   
 }
 
-/*contact section*/
+/* service section*/
   
+.service-section{
+ padding: 80px 0 80px;
+ min-height: 100vh;
+}
+
+.service-section .service-item{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-section .service-item-inner{
+  padding: 50px 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.service-section .service-item-inner:hover .icon i{
+  color: var(--skin-color);
+}
+
+.service-section .service-item-inner .icon{
+  height: 60px;
+  width: 66px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto 30px;
+  position: relative;
+}
+
+.service-section .service-item-inner .icon:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.service-section .service-item-inner:hover .icon{
+  box-shadow: var(--inner-shadow-0);
+}
+
+.service-section .service-item-inner:hover .icon:after{
+  box-shadow: var(--outer-shadow);
+}
+
+.service-section .service-item-inner .icon i{
+  font-size: 25px; 
+  line-height: 60px;
+  transition: all 0.3s ease;
+}
+
+.service-section .service-item-inner h3{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-black-700);
+  margin: 0 0 10px;
+  text-transform: capitalize;
+}
+
+.service-section .service-item-inner p{
+  font-size: 16px;
+  color: var(--text-black-600);
+  margin: 0;
+  line-height: 26px;
+}
+
+/*projects section*/
+
+.project-section{
+ padding: 80px 0 80px;
+ min-height: 100vh;
+}
+
+.project-section .section-title{
+  margin-bottom: 40px;
+}
+
+.project-section .project-filter{
+  padding: 0 15px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.project-section .filter-item{
+  display: inline-block;
+  margin: 0 5px 10px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-black-600);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.project-section .filter-item:hover:not(.active){
+  opacity: 0.5;
+}
+
+.project-section .filter-item.active{
+  color: var(--skin-color);
+}
+
+/*contact section*/
+ 
 .contact-section {
   padding: 80px 0 80px;
   min-height: 100vh; 
