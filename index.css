@@ -838,7 +838,7 @@ img{
 }
 
 .project-section .filter-item:hover:not(.active){
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .project-section .filter-item.active{
