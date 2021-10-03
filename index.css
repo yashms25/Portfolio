@@ -823,6 +823,7 @@ img{
   flex: 0 0 100%;
   max-width: 100%;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .project-section .filter-item{
@@ -843,6 +844,65 @@ img{
 
 .project-section .filter-item.active{
   color: var(--skin-color);
+}
+
+.project-section .project-item{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-section .project-item-inner{
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.project-section .project-item-img img{
+  border-radius: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.project-section .project-item-inner:hover .project-item-img img{
+  transform: translateY(-25px);
+}
+
+.project-section .project-item-img{
+  position: relative;
+}
+
+.project-section .project-item-img .view-project{
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--skin-color);
+  transition: all 0.3s ease;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transform: translateY(-5px);
+}
+
+.project-section .project-item-details{
+  display: none;
+}
+
+.project-section .project-item-inner:hover .view-project{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.project-section .project-item-inner p{
+  font-size: 16px;
+  margin: 10px 0 0;
+  color: var(--text-black-600);
+  text-transform: capitalize;
 }
 
 /*contact section*/
