@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="color.css">
 </head>
 <body>
-  <!--header start-->
+       <!--header start-->
     <header class="header">
       <div class="container">
         <div class="row justify-content-between">
@@ -30,11 +30,10 @@
       <div class="nav-inner">
         <ul><!--skills experience projects-->
           <li><a href="#" class="inner-shadow active">Home</a></li>  
-          <li><a href="#" class="outer-shadow hover-shadow">about</a></li>  
-          <li><a href="#" class="outer-shadow hover-shadow">services</a></li>  
-          <li><a href="#" class="outer-shadow hover-shadow">portfolio</a></li>  
-          <li><a href="#" class="outer-shadow hover-shadow">testimonial</a></li>  
-          <li><a href="#" class="outer-shadow hover-shadow">contact</a></li>  
+          <li><a href="#about" class="outer-shadow hover-shadow">About</a></li>  
+          <li><a href="#" class="outer-shadow hover-shadow">Services</a></li>  
+          <li><a href="#" class="outer-shadow hover-shadow">Projects</a></li>  
+          <li><a href="#" class="outer-shadow hover-shadow">Contact</a></li>  
         </ul>  
       </div>
       <!--copyrights-->
@@ -65,7 +64,7 @@
               <p>Hello</p>
               <h2>I'm Yash Mistry</h2>
               <h1>Web Developer & Programmer</h1>
-              <a href="#" class="btn-1 outer-shadow hover-shadow">About Me</a>
+              <a href="#about" class="btn-1 outer-shadow hover-shadow">About me</a>
             </div> 
              <div class="home-img">
                <div class="img-box inner-shadow">
@@ -77,7 +76,7 @@
       </section>
     <!--home section end-->
       <!--about section-->
-      <section class="about-section section">
+      <section id="about" class="about-section section">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -105,7 +104,7 @@
                 I am always ready to take challanges and explore new technologies. I like to work on different and unique projects that are able to solve some real-life problems.
                </p>  
                <a href="Yash Mistry resume.pdf" class="btn-1 outer-shadow hover-shadow">Download Resume</a>
-               <a href="mailto:yashmistry614@gmail.com" class="btn-1 outer-shadow hover-shadow">Hire Me</a>   
+               <a href="mailto:yashmistry614@gmail.com" class="btn-1 outer-shadow hover-shadow">Hire me</a>   
              </div>
           </div>
           <!--about tabs-->
@@ -330,7 +329,7 @@ In the last 7 years, we have been able to deliver 50 million+ hours of learning 
         </div>
       </section>
       <!--about section end-->
-<!--service section start--> 
+      <!--service section start--> 
       <section class="service-section section">
         <div class="container">
          <div class="row">
@@ -408,9 +407,9 @@ In the last 7 years, we have been able to deliver 50 million+ hours of learning 
          </div>
         </div>
       </section>      
-      <!--service section end--> 
-
-       <!--project section start-->
+      <!--service section end-->   
+        
+      <!--project section start-->
         <section class="project-section section">
           <div class="container">
             <div class="row">
@@ -421,7 +420,7 @@ In the last 7 years, we have been able to deliver 50 million+ hours of learning 
             <!--project filter-->
             <div class="row">
               <div class="project-filter">
-                <span class="filter-item outer-shadow active" data-target="all">All</span>  
+                <span class="filter-item outer-shadow active" data-target="All">All</span>  
                 <span class="filter-item" data-target="Web-Application">Web-Application</span>  
                 <span class="filter-item" data-target="Education">Education</span>  
                 <span class="filter-item" data-target="E-Commerce">E-Commerce</span>   
@@ -603,6 +602,55 @@ In the last 7 years, we have been able to deliver 50 million+ hours of learning 
           </div>  
         </section>
       <!--project section end-->
+        
+      <!--project pop-up start-->
+       <div class="pp project-popup">
+         <div class="pp-details">
+           <div class="pp-details-inner">
+             <div class="pp-title">
+                 <h2>Online Grocery Store</h2>
+                 <p>Category - <span class="pp-project-category">E-Commerce</span></p>
+             </div>  
+             <div class="pp-project-details">
+                 <div class="row">
+                     <div class="description">
+                       <h3>Project Brief:</h3>  
+                       <p>It is an e-commerce web application where you can get your favourite products. It also includes cart to track your products and filter for selecting different products.If you like it please give me star on github🔥️.</p>
+                     </div>  
+                     <div class="info">
+                       <h3>Project Info</h3>
+                       <ul>
+                         <li>Tools - <span>Html, Css, JavaScript, Django, sqlite(database)</span></li>  
+                         <li>GitHub - <span><a href="https://github.com/yashms25/grocerystore">https://github.com/yashms25/grocerystore</a></span></li>            
+                       </ul>  
+                     </div>
+                   </div>   
+             </div> 
+           </div>  
+         </div>
+         <div class="seperator"></div>
+         <div class="pp-main">
+           <div class="pp-main-inner">
+             <div class="pp-project-details-btn outer-shadow hover-shadow">Project Details <i class="fa fa-plus" aria-hidden="true"></i></div>
+             <div class="pp-close outer-shadow hover-shadow"> &times;</div>
+             <img src="grocery.jpg" alt="" class="pp-img outer-shadow">  
+             <div class="pp-counter">1 of 6</div>
+           </div>  
+           <div class="pp-loader">
+             <div>  
+             </div>  
+           </div>
+           <!-- pp navigation -->  
+           <div class="pp-prev">
+             <i class="fa fa-play"></i>      
+           </div>
+            <div class="pp-next">
+             <i class="fa fa-play"></i>      
+           </div>
+           <!-- pp navigation -->
+         </div>  
+       </div>
+      <!--project pop-up end-->
  
       <!--contact section -->
        <section class="contact-section section">
