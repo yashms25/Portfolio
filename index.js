@@ -1,6 +1,5 @@
 /*toggle nav btn*/
 
-console.log('Hello Dcoder')
 let menu = document.getElementById('menu-btn');
 let close = document.getElementById('close-btn');
 let nav = document.getElementsByClassName("nav-menu");
@@ -29,7 +28,7 @@ tabcontainer.addEventListener("click", (e) => {
 })
 
 function scrollingtoggle() {
-  document.body.classList.toggle("stop-scrolling");
+  document.body.classList.toggle("hidden-scrolling");
 }
 
 
@@ -90,6 +89,9 @@ projectItemsContainer.addEventListener("click", (e) => {
 
 closeBtn.addEventListener("click", () => {
   popuptoggle();
+  if (projectDetailsContainer.classList.contains('active')) {
+    popupDetailsToggle();
+  }
 })
 
 function popuptoggle() {
@@ -157,4 +159,12 @@ function popupDetailsToggle() {
     popup.scrollTo(0, projectDetailsContainer.offsetTop);
   }
 }
+
+// hide all sections except active
+const sections = document.querySelectorAll(".section");
+sections.forEach((section)=>{
+if(!section.classList.contains("active")){
+  section.classList.add("hide");
+}
+})
 
