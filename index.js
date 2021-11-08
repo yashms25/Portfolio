@@ -1,16 +1,59 @@
 /*toggle nav btn*/
 
-let menu = document.getElementById('menu-btn');
-let close = document.getElementById('close-btn');
-let nav = document.getElementsByClassName("nav-menu");
-menu.addEventListener("click", () => {
-  console.log("click menu")
-  nav[0].style.opacity = 1;
-  nav[0].style.zIndex = 999;
-})
-close.addEventListener("click", () => {
-  nav[0].style.opacity = 0;
-  nav[0].style.zIndex = -1;
+const navBtn = document.querySelector(".nav-btn");
+const navMenu = document.querySelector(".nav-menu");
+const navcloseBtn = navMenu.querySelector(".close-menu");
+navBtn.addEventListener("click", showNav);
+navcloseBtn.addEventListener("click", hideNav);
+
+function showNav() {
+  navMenu.classList.add("open");
+  scrollingtoggle();
+}
+
+function hideNav() {
+  navMenu.classList.remove("open");
+  fadeOutEffect();
+  scrollingtoggle();
+
+}
+
+function fadeOutEffect() {
+  document.querySelector(".fade-out-effect").classList.add("active");
+  setTimeout(() => {
+    document.querySelector(".fade-out-effect").classList.remove("active");
+  }, 300)
+}
+
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("link-item")) {
+    if (event.target.hash !== "") {
+      event.preventDefault();
+      const hash = event.target.hash;
+      document.querySelector(".section.active").classList.add("hide");
+      document.querySelector(".section.active").classList.remove("active");
+      document.querySelector(hash).classList.add("active");
+      document.querySelector(hash).classList.remove("hide");
+      navMenu.querySelector(".active").classList.add("outer-shadow", "hover-shadow");
+      navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
+      if (navMenu.classList.contains("open")) {
+        event.target.classList.add("active", "inner-shadow");
+        event.target.classList.remove("hover-shadow", "outer-shadow");
+        hideNav();
+      }
+      else {
+        let navItems = navMenu.querySelectorAll(".link-item");
+        navItems.forEach((item) => {
+          if (hash === item.hash) {
+            item.classList.add("active", "inner-shadow");
+            item.classList.remove("hover-shadow", "outer-shadow");
+          }
+        })
+        fadeOutEffect();
+        window.location.hash = hash;
+      }
+    }
+  }
 })
 
 /*toggle end*/
@@ -137,7 +180,7 @@ function popupDetails() {
   popup.querySelector(".pp-title h2").innerHTML = title;
   const category = projectItems[itemIndex].getAttribute("data-category");
   popup.querySelector(".pp-project-category").innerHTML = category;
-  
+
 }
 
 projectDetailsBtn.addEventListener("click", () => {
@@ -162,9 +205,9 @@ function popupDetailsToggle() {
 
 // hide all sections except active
 const sections = document.querySelectorAll(".section");
-sections.forEach((section)=>{
-if(!section.classList.contains("active")){
-  section.classList.add("hide");
-}
+sections.forEach((section) => {
+  if (!section.classList.contains("active")) {
+    section.classList.add("hide");
+  }
 })
 
