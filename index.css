@@ -275,7 +275,7 @@ img {
   display: inline-block;
   font-size: 30px;
   font-weight: 700;
-  color: black;
+  color: var(--text-black-900);
   text-transform: uppercase;
   margin: 0;
 }
@@ -739,14 +739,14 @@ img {
 .about-section
   .timeline
   .timeline-item:nth-child(odd)
-  .timeline-item-inner:befor {
+  .timeline-item-inner:before {
   right: -30px;
 }
 
 .about-section
   .timeline
   .timeline-item:nth-child(even)
-  .timeline-item-inner:befor {
+  .timeline-item-inner:before {
   left: -30px;
 }
 
