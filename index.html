@@ -8,7 +8,13 @@
   <title>Yash Mistry - Portfolio</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style-switcher.css">
   <link rel="stylesheet" href="color.css">
+  <link rel="stylesheet" href="color.css" class="alternate-style" title="color-1" type="text/css" disabled>
+  <link rel="stylesheet" href="color2.css" class="alternate-style" title="color-2" type="text/css" disabled>
+  <link rel="stylesheet" href="color3.css" class="alternate-style" title="color-3" type="text/css" disabled>
+  <link rel="stylesheet" href="color4.css" class="alternate-style" title="color-4" type="text/css" disabled>
+  <link rel="stylesheet" href="color5.css" class="alternate-style" title="color-5" type="text/css" disabled>
 </head>
 
 <body>
@@ -749,6 +755,26 @@
   </div>
   <!--project pop-up end-->
 
+  <!-- style switcher start -->
+  <div class="style-switcher outer-shadow">
+    <div class="style-switcher-toggler s-icon outer-shadow hover-shadow">
+      <i class="fa fa-cog fa-spin" aria-hidden="true"></i>
+    </div>
+    <div class="day-night s-icon outer-shadow hover-shadow">
+      <i class="fa" aria-hidden="true"></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+  <!-- style switcher end -->
+
+
   <!--contact section -->
   <section class="contact-section section" id="contact">
     <div class="container">
@@ -821,5 +847,6 @@
   <!--contact end -->
 </body>
 <script src="index.js"></script>
+<script src="style-switcher.js"></script>
 
 </html>
