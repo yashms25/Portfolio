@@ -465,7 +465,7 @@ img {
 
 .nav-menu .copyright {
   position: absolute;
-  left: -60px;
+  left: -90px;
   top: 50%;
   font-size: 15px;
   color: var(--text-black-600);
@@ -931,7 +931,6 @@ img {
 }
 
 .project-section .project-item {
-  display: block;
   animation: fadeintop 1s ease;
 }
 
