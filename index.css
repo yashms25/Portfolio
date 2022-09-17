@@ -129,6 +129,11 @@ img {
   align-items: center;
 }
 
+.flex {
+  display: inline-block;
+  flex-direction: column;
+}
+
 .btn-1 {
   padding: 10px 25px;
   font-size: 16px;
@@ -141,6 +146,7 @@ img {
   transition: all 0.3s ease;
   display: inline-block;
   border: none;
+  margin: 10px;
 }
 
 .btn-1:after {
